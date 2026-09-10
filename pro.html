@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pro Tutorials</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pro Crochet Tutorials</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Advanced Projects</h2>
+    <ul>
+      <li>Bags</li>
+      <li>Clothes</li>
+      <li>Curtains</li>
+    </ul>
+
+    <h3>Enter Yarn & Hook Details</h3>
+    <form onsubmit="suggestPattern(event)">
+      <label for="yarn">Yarn Strands:</label>
+      <input type="number" id="yarn" placeholder="e.g. 2, 4">
+
+      <label for="hook">Hook Size (mm):</label>
+      <input type="number" id="hook" placeholder="e.g. 3.5">
+
+      <button type="submit">Get AI Suggestion</button>
+    </form>
+
+    <div id="patternResult"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
