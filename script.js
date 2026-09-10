@@ -1,3 +1,4 @@
+// Pattern suggestion logic
 function suggestPattern(event) {
   event.preventDefault();
 
@@ -20,4 +21,11 @@ function suggestPattern(event) {
   }
 
   resultBox.innerHTML = `<p>✨ Suggested Pattern: ${suggestion}</p>`;
+}
+
+// Dashboard progress update
+function updateProgress() {
+  document.getElementById("tutorialProgress").style.width = "70%";
+  document.getElementById("grannyProgress").style.width = "40%";
+  document.getElementById("sleeveProgress").style.width = "20%";
 }
