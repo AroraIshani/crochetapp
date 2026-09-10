@@ -2,34 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crochet Application</title>
+  <title>Crochet App - Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>🧶 Crochet Application</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="patterns.html">Patterns</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="chatbot.html">AI Chatbot</a>
-    </nav>
   </header>
 
-  <section id="patterns">
-    <h2>Pattern Finder</h2>
-    <form onsubmit="suggestPattern(event)">
-      <label for="yarn">Yarn Type:</label>
-      <input type="text" id="yarn" placeholder="e.g. cotton, wool">
-
-      <label for="hook">Hook Size (mm):</label>
-      <input type="number" id="hook" placeholder="e.g. 3.5">
-
-      <button type="submit">Find Pattern</button>
+  <section id="login">
+    <h2>Login</h2>
+    <form onsubmit="loginUser(event)">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <button type="submit">Login</button>
     </form>
+  </section>
 
-    <div id="patternResult"></div>
+  <section id="level" style="display:none;">
+    <h2>Select Your Knowledge Level</h2>
+    <button onclick="redirectLevel('beginner.html')">Beginner</button>
+    <button onclick="redirectLevel('intermediate.html')">Intermediate</button>
+    <button onclick="redirectLevel('pro.html')">Pro</button>
   </section>
 
   <footer>
