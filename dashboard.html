@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Crochet App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🧶 Crochet Dashboard</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="patterns.html">Patterns</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="chatbot.html">AI Chatbot</a>
+    </nav>
+  </header>
+
+  <section id="dashboard">
+    <h2>Your Progress</h2>
+
+    <div class="progress-container">
+      <p>Beginner Tutorial</p>
+      <div class="progress-bar">
+        <div class="progress" id="tutorialProgress"></div>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <p>Granny Square Project</p>
+      <div class="progress-bar">
+        <div class="progress" id="grannyProgress"></div>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <p>Phone Sleeve Project</p>
+      <div class="progress-bar">
+        <div class="progress" id="sleeveProgress"></div>
+      </div>
+    </div>
+
+    <button onclick="updateProgress()">Update Progress</button>
+  </section>
+
+  <footer>
+    <p>© 2026 Crochet App by Ishani</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
