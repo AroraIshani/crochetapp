@@ -1,31 +1,31 @@
-// Pattern suggestion logic
+function loginUser(event) {
+  event.preventDefault();
+  document.getElementById("login").style.display = "none";
+  document.getElementById("level").style.display = "block";
+}
+
+function redirectLevel(page) {
+  window.location.href = page;
+}
+
 function suggestPattern(event) {
   event.preventDefault();
 
-  const yarn = document.getElementById("yarn").value.toLowerCase();
+  const yarn = parseInt(document.getElementById("yarn").value);
   const hook = parseFloat(document.getElementById("hook").value);
   const resultBox = document.getElementById("patternResult");
 
   let suggestion = "";
 
-  if (yarn.includes("cotton") && hook <= 3.5) {
-    suggestion = "Try a delicate lace doily or summer top 🌸";
-  } else if (yarn.includes("wool") && hook >= 5) {
-    suggestion = "Perfect for cozy blankets or chunky scarves 🧣";
-  } else if (yarn.includes("acrylic")) {
-    suggestion = "Versatile choice — granny squares or phone sleeves 📱";
-  } else if (yarn.includes("silk")) {
-    suggestion = "Elegant shawls or lightweight wraps ✨";
+  if (yarn <= 2 && hook <= 3.5) {
+    suggestion = "✨ Fine yarn + small hook → lace or delicate motifs.";
+  } else if (yarn === 4 && hook >= 5) {
+    suggestion = "🧣 Perfect for chunky scarves, blankets, or bags.";
+  } else if (yarn >= 6) {
+    suggestion = "🪢 Thick yarn → great for rugs or sturdy items.";
   } else {
-    suggestion = "Experiment with a floral granny square — works with most yarns!";
+    suggestion = "🌸 Try a granny square — works with most yarns!";
   }
 
-  resultBox.innerHTML = `<p>✨ Suggested Pattern: ${suggestion}</p>`;
-}
-
-// Dashboard progress update
-function updateProgress() {
-  document.getElementById("tutorialProgress").style.width = "70%";
-  document.getElementById("grannyProgress").style.width = "40%";
-  document.getElementById("sleeveProgress").style.width = "20%";
+  resultBox.innerHTML = `<p>AI Suggestion: ${suggestion}</p>`;
 }
